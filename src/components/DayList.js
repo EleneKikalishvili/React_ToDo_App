@@ -6,9 +6,9 @@ const DayList = () => {
   const daysArray = Schedule.map((ob, i) => {
     return (
       <WeekDay
-        id={Schedule[i].id}
-        todo={Schedule[i].todos.map((j, k) => {
-          return <li key={j.id}>{j.todo}</li>;
+        key={Schedule[i].id}
+        todo={Schedule[i].todos.map((sub) => {
+          return <li key={sub.id}>{sub.todo}</li>;
         })}
         day={Schedule[i].day}
       />
