@@ -3,6 +3,7 @@ import "./App.css";
 import DayList from "../components/DayList";
 import { Schedule } from "../components/Schedule";
 import SearchBox from "../components/SearchBox";
+import SelectOptions from "../components/SelectOptions";
 
 class App extends Component {
   constructor() {
@@ -25,6 +26,7 @@ class App extends Component {
           placeholder="Search Days"
           handelChange={(e) => this.setState({ searchField: e.target.value })}
         />
+        <SelectOptions />
         <DayList schedule={filteredSchedule} />
       </div>
     );
