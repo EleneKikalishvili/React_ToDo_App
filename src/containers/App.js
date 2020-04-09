@@ -27,7 +27,6 @@ class App extends Component {
           handelChange={(e) => this.setState({ searchField: e.target.value })}
         />
         <SelectOptions
-          selectDay={this.selectDay}
           handelChange={(e) => this.setState({ searchField: e.target.value })}
         />
         <DayList schedule={filteredSchedule} />
