@@ -3,6 +3,7 @@ export const Schedule = [
     todos: [
       { todo: "Learn React", id: "k1" },
       { todo: "Learn Vue", id: "k2" },
+      { todo: "Learn Vue", id: "k21" },
     ],
     id: "d1",
     day: "Monday",
