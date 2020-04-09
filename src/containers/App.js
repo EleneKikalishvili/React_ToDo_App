@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import DayList from "../components/DayList";
 import { Schedule } from "../components/Schedule";
+import SearchBox from "../components/SearchBox";
+
 class App extends Component {
   constructor() {
     super();
@@ -19,13 +21,9 @@ class App extends Component {
     );
     return (
       <div className="tc">
-        <input
-          className="ma5"
-          type="search"
-          placeholder="search"
-          onChange={(e) => {
-            this.setState({ searchField: e.target.value });
-          }}
+        <SearchBox
+          placeholder="Search Days"
+          handelChange={(e) => this.setState({ searchField: e.target.value })}
         />
         <DayList schedule={filteredSchedule} />
       </div>
