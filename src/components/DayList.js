@@ -6,8 +6,12 @@ const DayList = ({ schedule }) => {
     return (
       <WeekDay
         key={schedule[i].id}
-        todo={schedule[i].todos.map((sub, index) => {
-          return <li key={sub.id}>{sub.todo}</li>;
+        todo={schedule[i].todos.map((sub) => {
+          return (
+            <li className="tl" key={sub.id}>
+              {sub.todo}
+            </li>
+          );
         })}
         day={schedule[i].day}
       />
