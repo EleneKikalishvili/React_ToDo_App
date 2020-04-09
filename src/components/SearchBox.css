@@ -4,10 +4,11 @@
   outline: none;
   width: 150px;
   padding: 10px;
-  line-height: 30px;
+  line-height: 20px;
   border-radius: 3px;
-  margin: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
-  color: white;
+  color: black;
   background-color: rgb(245, 211, 217);
 }
