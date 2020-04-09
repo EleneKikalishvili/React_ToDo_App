@@ -1,16 +1,15 @@
 import React from "react";
-import { Schedule } from "./Schedule";
-import WeekDay from "./WeekDAy";
+import WeekDay from "./WeekDay";
 
-const DayList = () => {
-  const daysArray = Schedule.map((ob, i) => {
+const DayList = ({ schedule }) => {
+  const daysArray = schedule.map((ob, i) => {
     return (
       <WeekDay
-        key={Schedule[i].id}
-        todo={Schedule[i].todos.map((sub) => {
+        key={schedule[i].id}
+        todo={schedule[i].todos.map((sub, index) => {
           return <li key={sub.id}>{sub.todo}</li>;
         })}
-        day={Schedule[i].day}
+        day={schedule[i].day}
       />
     );
   });
