@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import DayList from "../components/DayList";
 import { Schedule } from "../components/Schedule";
 import SearchBox from "../components/SearchBox";
@@ -17,6 +16,7 @@ class App extends Component {
 
   render() {
     const { schedule, searchField } = this.state;
+
     const filteredSchedule = schedule.filter((day) =>
       day.day.toLowerCase().includes(searchField.toLowerCase())
     );
@@ -26,7 +26,10 @@ class App extends Component {
           placeholder="Search Days"
           handelChange={(e) => this.setState({ searchField: e.target.value })}
         />
-        <SelectOptions />
+        <SelectOptions
+          selectDay={this.selectDay}
+          handelChange={(e) => this.setState({ searchField: e.target.value })}
+        />
         <DayList schedule={filteredSchedule} />
       </div>
     );
